@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+body, h1, h2, h3, h4, h5{
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;    
+    color:  black;
+  
+}
+first-new-section{
+    margin: 0;
+    padding: 0;
+}
+.title-new{
+  margin-top: 20px;
+  padding: 0;
+}
+.title-new, a{
+  color: black;
+  font-weight: 400;
+}
+.title-new .header-new {
+    font-size: larger;
+    padding-right: 50px;
+}
+.title-new .header-new > a{
+    font-weight: 700;
+}
+.title-new> ul{
+    margin: 5px;
+    padding: 0;
+}
+
+.title-new ul> li{
+padding-top: 10px;
+
+ 
+}
+
+.first-new-second-section{
+  margin-top: 40px;
+
+   gap: 10px;
+   
+}
+
+.first-new-second-section  a{
+    font-size: larger;
+    font-weight: 700;
+}
+.first-new-second-section img{
+    width: 350px;
+    height: 200px;
+}
+.first-new-third-section {
+    margin-top: 40px;
+
+    gap: 10px;
+    
+}
+.first-new-third-section img{
+    width: 350px;
+    height: 200px;
+}
+first-new-third-section,first-new-block a{
+font-weight: 600;
+}
+.first-new-block a{
+    font-weight: 700;
+    font-size: large;
+}
+
+.new-list{
+    margin-top:10px;
+    margin-bottom:10px;
+
+}
+.new-list-title{
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+
+    padding-top:10px ;
+    border-top: 1px solid black;
+}
+.new-list-title a{
+   font-size: large;
+}
+
+
+.second-new-section{
+ margin-top: 10px;
+ padding: 10px;
+}
+.second-new-second-section  a{
+    font-size: larger;
+    font-weight: 700;
+}
+.second-new-second-section img{
+    width: 350px;
+    height: 200px;
+}
+
+
+.category-list , a{
+ color: white;
+}
