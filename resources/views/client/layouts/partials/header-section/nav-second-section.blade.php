@@ -1,12 +1,18 @@
 <div class="nav-second-section ">
     <div class="menu-category text-white pl-5">
-        <ul class="flex flex-row gap-4 mt-3">
-            <li><a href="">123</a></li>
-            <li><a href="">123</a></li>
-            <li><a href="">123</a></li>
-            <li><a href="">123</a></li>
-            <div class="icon-wrap  w-auto h-auto ">
-                <i class="bi bi-search text-white"></i>
+        <ul class="flex flex-row gap-6 mt-2">
+            <li><a href="">Watch
+                </a></li>
+            <li><a href="">Listen
+                </a></li>
+            <li><a href="">Live TV</a></li>
+            <div class="search-wrapper  w-auto h-auto ">
+                <form action="{{ route('filter-new') }}" class="flex flex-row gap-1" method="get">
+                    <input type="text" class="form-control h-[30px]" name="search">
+                    <button class="" type="submit">
+                        <i class="bi bi-search text-white"></i>
+                    </button>
+                </form>
 
             </div>
             <div class="user-form">
@@ -17,7 +23,7 @@
             </div>
         </ul>
     </div>
-   
+
 
 
 </div>

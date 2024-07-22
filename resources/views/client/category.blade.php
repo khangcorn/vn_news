@@ -1,50 +1,56 @@
 @extends('client.layouts.master')
 
 @section('content')
-
     <div class="first-new-section  ">
         <div class="news ms-2 me-4 ">
             <div class="row ">
                 <div class="col-lg-6 m-0 ">
-               
-                        <div class="head-new-content ms-5 mt-3">
-                            <h1 class="text-4xl text-black"><a href="{{'detail-new/'. $news[0]['id']}}" class="text-4xl text-black no-underline font-bold	">{{ $news[0]['title'] }}</a> </h1>
-                            <div class="img-wrap">
-              
-                                <img class="w-[90%]" src="https://media.cnn.com/api/v1/images/stellar/prod/240719130407-05-biden-gallery-update-071924.jpg?c=16x9&q=w_1280,c_fill" alt="">
-                     
-                            </div>
 
-                            <div class="title-new border-b-[1px] border-stone-50">
-                                <div class="header-new ">
-                                    <a class="text-black" href="">{{$news[1]['title']}}</a>
+                    <div class="head-new-content ms-5 mt-3">
+                        @if (!empty($categoriesNew))
+                            <h1 class="text-4xl text-black"><a href="{{ 'detail-new/' . $categoriesNew[0]->news_id }}"
+                                    class="text-4xl text-black no-underline font-bold	">{{ $categoriesNew[0]->news_title }}</a>
+                            </h1>
+                        @endif
+                        <div class="img-wrap">
 
-                                </div>
-
-                                <div class="menu-news">
-                                    <ul class="w-[90%]">
-                                        @foreach ($news as $news )
-                                            
-                                     
-                                        <li><a href="{{'detail-new/'. $news->id}}" class="text-black" class="text-black"
-                                                class="text-black">
-                                                {{$news->title}}</a>
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
+                            <img class="w-[90%]"
+                                src="https://media.cnn.com/api/v1/images/stellar/prod/240719130407-05-biden-gallery-update-071924.jpg?c=16x9&q=w_1280,c_fill"
+                                alt="">
 
                         </div>
-             
+
+                        <div class="title-new border-b-[1px] border-stone-50">
+                            <div class="header-new ">
+
+                                @if (!empty($categoriesNew))
+                                    <a class="text-black" href="">{{ $categoriesNew[0]->news_title }}</a>
+                                @endif
+
+                            </div>
+
+                            <div class="menu-news">
+                                <ul class="w-[90%]">
+                                    @foreach ($categoriesNew as $news)
+                                        <li><a href="" class="text-black" class="text-black" class="text-black">
+                                                {{ $news->news_title }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
 
                 </div>
                 <div class="col-lg-3 ml-[-50px]">
                     <div class="first-new-second-section">
                         <div class="first-new-block">
-           
-                                
-                       
+
+
+
                             <div class="second-section-image">
                                 <img width="100" height="100"
                                     src="https://media.cnn.com/api/v1/images/stellar/prod/c-2024-06-29t011026z-1702008836-rc2hk8ar2wl0-rtrmadp-3-usa-election-biden-next.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp"
@@ -53,7 +59,7 @@
                             <a href="" class="text-black" class="text-black">How Biden would be replaced, according
                                 to Democrats’ rules</a>
 
-                     
+
                         </div>
                         <div class="second-new-block">
                             <div class="second-section-image">
@@ -623,14 +629,6 @@
 
     </div>
 @endsection
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
 
 <body>

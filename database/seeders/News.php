@@ -19,13 +19,13 @@ class News extends Seeder
           $i = 0;
         $title =  Str::random(10);
         $content = Str::random(100);
-      
+
         
-        for ($i = 1; $i < 10; $i++) {
+        for ($i = 1; $i < 50; $i++) {
             DB::table('news')->insert([
                 'title' => $title,
                 'content' => $content,
-                'category_id' => $i,
+                'category_id' => random_int(1,10),
                 'user_id' => 1,
 
             ]);
